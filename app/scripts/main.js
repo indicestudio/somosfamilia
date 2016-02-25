@@ -1,9 +1,11 @@
+'use strict';
+
 $(document).ready(function(){
 	//Opacity scroll
 	var target = $('#main-title');
 	var targetHeight = target.outerHeight();
 
-	$(document).scroll(function(e){
+	$(document).scroll(function(){
 		var scrollPercent = (targetHeight - (window.scrollY - 100)) / targetHeight;
 		if(scrollPercent >= 0){
 			target.css('opacity', scrollPercent);
@@ -24,16 +26,10 @@ $(document).ready(function(){
 		}
 	});
 
-	//Parallax
-	$('#main-nav').localScroll(800);
-	$('#header-bkg').parallax("50%", 0.4);
-	$('#main-title').parallax("50%", 0.2);
-	$('#sabores').parallax("50%", 0.25);
-
 	//Show Text
 	$('.more-text').hide();
 	$('.more-arrow').click(function(){
-		$('.more-text').slideToggle("slow");
-		$(this).toggleClass("rotate");
+		$('.more-text').slideToggle('slow');
+		$(this).toggleClass('rotate');
 	});
 });

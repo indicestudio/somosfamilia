@@ -26,7 +26,7 @@
       <p class="browserupgrade">Somos familia e <a href="http://www.indicestudio.cl/">Indicestudio</a> recomiendan utilizar un navegador distinto o <a href="http://browsehappy.com/">actualiza tu explorador</a> para mejorar tu experiencia.</p>
       <![endif]-->
       <header id="header">
-        <div id="header-bkg">
+        <div id="header-bkg" data-parallax="scroll" data-image-src="images/main.jpg" iosFix="true">
         </div>
         <nav id="main-nav">
           <div class="container">
@@ -89,7 +89,7 @@
       <section id="recetas">
         <div class="container-fluid">
           <div class="row">
-            <div id="sabores"></div>
+            <div id="sabores" data-parallax="scroll" data-image-src="images/sabores.jpg" data-speed="0.3" iosFix="true"></div>
           </div>
         </div>
       </section>
@@ -170,53 +170,10 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="scripts/jquery.parallax-1.1.3.js"></script>
-        <script src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-        <script src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+        <script src="/bower_components/parallax.js/parallax.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- opacity scroll -->
-        <script>
-          var scrollTop = $(window).scrollTop();
-          var height = $(window).height();
-          $('#header-callout').css({
-            'opacity': ((height - scrollTop)/height)
-          });
-        </script>
-        <!-- parallax config -->
-        <script>
-          $(document).ready(function(){
-            $('#main-nav').localScroll(800);
-            $('#header-bkg').parallax("50%", 0.4);
-            $('#main-title').parallax("50%", 0.2);
-            $('#sabores').parallax("50%", 0.25);
-
-            //Show text
-            $('.more-text').hide();
-            $('.more-arrow').click(function(){
-              $('.more-text').slideToggle("slow");
-              $(this).toggleClass("rotate");
-            });
-
-          })
-        </script>
-        <!-- fixed top menu -->
-        <script>
-          $(window).bind('scroll', function () {
-            if ($(window).scrollTop() > 20) {
-              $('#main-nav').addClass('menu-fixed');
-              $('#logo-fixed').removeClass('hidden');
-              $('#logo').addClass('hidden');
-
-            } else {
-              $('#main-nav').removeClass('menu-fixed');
-              $('#logo-fixed').addClass('hidden');
-              $('#logo').removeClass('hidden');
-
-            }
-          });
-        </script>
-
+   
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
