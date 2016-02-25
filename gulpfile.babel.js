@@ -6,7 +6,6 @@ import del from 'del';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
-var ghPages = require('gulp-gh-pages');
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
@@ -90,13 +89,6 @@ gulp.task('extras', () => {
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
-
-// ---------Custom deploy to gh-pages ----------
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe($.ghPages());
-});
-//----------End of gh-pages ---------------
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
