@@ -6,6 +6,7 @@ import del from 'del';
 import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
+var ghPages = require('gulp-gh-pages');
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
