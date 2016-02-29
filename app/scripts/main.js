@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 	//Opacity scroll
-	var target = $('#main-title');
+	var target = $('#main-title, .roll-over');
 	var targetHeight = target.outerHeight();
 
 	$(document).scroll(function(){
@@ -32,4 +32,17 @@ $(document).ready(function(){
 		$('.more-text').slideToggle('slow');
 		$(this).toggleClass('rotate');
 	});
+
+	//Scroll navigation
+	$('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 500, 'swing');
+	});
+	
 });
