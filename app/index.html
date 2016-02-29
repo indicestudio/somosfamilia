@@ -10,33 +10,98 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- build:css styles/vendor.css -->
-  <link rel="stylesheet" href="styles/bootstrap.css">
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <!-- GoogleMap -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <!-- GoogleMap API -->
+  <script>
+    function initialize() {
+      var myLatLng = {lat: -36.6101787, lng: -72.097548};
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
+        center: new google.maps.LatLng(myLatLng),
+        zoom: 18,
+        scrollwheel: false,
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [
+        {
+          "featureType": "road.arterial",
+          "stylers": [
+          { "color": "#b5b73b" }
+          ]
+        },{
+          "featureType": "road.local",
+          "stylers": [
+          { "color": "#c12425" },
+          { "saturation": 5 }
+          ]
+        },{
+          "featureType": "road",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+          { "color": "#ffffff" },
+          { "visibility": "on" },
+          { "weight": 0.4 }
+          ]
+        },{
+          "featureType": "road",
+          "elementType": "labels.text.fill",
+          "stylers": [
+          { "color": "#ffffff" }
+          ]
+        },{
+          "featureType": "landscape.man_made",
+          "stylers": [
+          { "color": "#a9aab2" }
+          ]
+        }
+        ]
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: 'Restaurant SomosFamilia'
+      });
+      marker.setMap(map);
+      marker.addListener('click', toggleBounce);
+    }
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">Somos familia e <a href="http://www.indicestudio.cl/">Indicestudio</a> recomiendan utilizar un navegador distinto o <a href="http://browsehappy.com/">actualiza tu explorador</a> para mejorar tu experiencia.</p>
       <![endif]-->
       <header id="header">
-        <div class="parallax-wrapper"> 
-          <div id="header-bkg" data-parallax="scroll" data-image-src="images/main.jpg" data-ios-fix="true">
+       <div class="parallax-wrapper"> 
+          <div id="header-bkg" data-parallax="scroll" data-image-src="/images/main.jpg" data-ios-fix="true">
           </div>
         </div>
-        <nav id="main-nav">
+      <nav id="main-nav">
           <div class="container">
             <div id="logo-wrapper">
               <img id="logo" src="images/logomain.svg" alt="logo">
             </div>
             <div id="logo-fixed-wrapper">
-              <img class="hidden" id="logo-fixed" src="images/logomain2.svg" alt="logo2">
+              <a href="#">
+                <img class="hidden" id="logo-fixed" src="/images/logomain2.svg" alt="logo2">
+              </a>
             </div>
             <ul id="menu-right">
               <li class="inner-menu"><a href="#header">Menu</li></a>
@@ -46,7 +111,6 @@
             </ul>
           </div><!-- End of container -->
         </nav>
-    
 
         <div id="main-title">
           <h2 id="header-callout">Bienvenidos</h2>
@@ -56,7 +120,31 @@
           </div>
           <h3 id="header-subline">¡Ya abrimos!</h3>
         </div>
+        <button type="button" data-toggle="modal" data-target="#carta-modal" class="roll-over">
+          <a href="#">carta</a>
+        </button>
       </header><!-- End of header -->
+   
+
+      <!-- Modal -->
+      <div class="modal fade" id="carta-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Carta</h4>
+            </div>
+            <div class="modal-body">
+              Contenido de la carta
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="white-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+        </div><!-- End of carta modal -->
+
+
 
       <section id="con-concepto">
         <div class="container">
@@ -101,27 +189,22 @@
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <div class="col-sm-6"><img src="http://placehold.it/250x250" alt="receta1"></div>
-                <div class="col-sm-6"><img src="http://placehold.it/250x250" alt="receta2"></div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6"><img src="http://placehold.it/250x250" alt="receta3"></div>
-                <div class="col-sm-6"><img src="http://placehold.it/250x250" alt="receta4"></div>
+                <div class="col-sm-6"><img src="/images/homecarta.png" alt="receta1"></div>
               </div>
             </div>
             <div class="col-md-6">
               <h2 class="sec-title">Conoce</h2>
               <h3 class="sec-subtitle">Nuestro Menu</h3>
-              <p class="sec-p">"Sabor, aroma, color y un ambiente familiar" Define nuestra mesa:
-                respetanto un estilo clásico y sencillo con toques de vanguardia, comos una
-                alternativa gastronómica nueva de la cocina Chilena, recopilando antiguas recetas de la abuela e impregnando en ellas su particular toque de amor amor y sabo, de chile y el mundo</p>
+              <p class="sec-p">Recopilamos antiguas recetas de la abuela e impregnamos en ellas un particular toque de amor y sabor, conoce nuestro menú.</p>
               </div>
-              <button class="white-btn">Ver el menu completo</button>
+              <button class="white-btn"><a href="#">Ver el menu completo</a></button>
             </div>
           </div><!-- End of container-->
         </section>
-
-        <img id="img-responsive" class="img-responsive" src="http://placehold.it/1920x400" alt="somos familia">
+        
+        <section id="separator">
+          <div id="resto" data-parallax="scroll" data-image-src="images/imagenresto.jpg" data-speed="0.3" iosFix="true"></div>
+        </section>
 
         <section id="ubicacion">
           <div class="container">
@@ -135,15 +218,10 @@
                   centro de la futura capital de Ñuble.
                   !Te esperamos!
                 </p>
-                <button class="white-btn">Hace tu reserva</button>
+                <button class="white-btn"><a href="#">Haz tu reserva</a></button>
               </div>
               <div class="col-sm-6">
-                <div class="col-sm-6">
-                  <img src="http://placehold.it/250x400" alt="entrada">
-                </div>
-                <div class="col-sm-6">
-                  <img src="http://placehold.it/250x400" alt="entrada2">
-                </div>
+                <div id="map"></div>
               </div>
             </div>
           </div><!-- End of container -->
@@ -151,11 +229,10 @@
 
         <footer id="footer">
           <div class="container">
-            <div id="logo-wrapper">
-              <img class="logo" src="http://placehold.it/25x25" alt="logo">
-            </div>
-            <h3>Texto Footer</h3>
-            <h3>Fono - Dirección - etc</h3>
+            <img id="logo" src="images/logomain.svg" alt="logo">
+            <h1>hola@somosfamilia.cl</h1>
+            <hr>
+            <h1 class="small-caps">Todos los derechos reservados</h1>
           </div>
         </footer>
 
@@ -175,7 +252,7 @@
         <script src="/bower_components/parallax.js/parallax.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
