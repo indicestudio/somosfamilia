@@ -1,4 +1,4 @@
-'use strict';
+	'use strict';
 
 $(document).ready(function(){
 	//Opacity scroll
@@ -34,15 +34,23 @@ $(document).ready(function(){
 	});
 
 	//Scroll navigation
-	$('a[href^="#"]').on('click',function (e) {
+	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 
-		var target = this.hash;
-		var $target = $(target);
+		var targetSc = this.hash;
+		var $targetSc = $(targetSc);
 
 		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top
+			'scrollTop': $targetSc.offset().top
 		}, 500, 'swing');
 	});
-	
+
+	//Gallery
+	$('div#makeMeScrollable').smoothDivScroll({
+        touchScrolling: true,
+        hotSpotScrolling: false
+    });
+
 });
+
+
