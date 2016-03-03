@@ -7,6 +7,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "parallax.js": "^1.4.2"
+    "parallax.js": "^1.4.2",
+    "lightbox2": "^2.8.2"
   }
 }

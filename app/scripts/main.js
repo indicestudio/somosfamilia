@@ -27,10 +27,12 @@ $(document).ready(function(){
 	});
 
 	//Show Text
+	var center = $('.center-vertical');
 	$('.more-text').hide();
 	$('.more-arrow').click(function(){
-		$('.more-text').slideToggle('slow');
+		$('.more-text').slideToggle('400');
 		$(this).toggleClass('rotate');
+		center.toggleClass('center-vertical', 400);
 	});
 
 	//Scroll navigation

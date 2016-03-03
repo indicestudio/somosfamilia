@@ -11,6 +11,7 @@
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/lightbox2/dist/css/lightbox.css">
   <!-- endbower -->
   <!-- endbuild -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -86,150 +87,192 @@
   <!-- Scroll CSS -->
   <!-- Styles for my specific scrolling content -->
   <style type="text/css">
-    
-    }
-  </style>
+
+  }
+</style>
 </head>
 <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">Somos familia e <a href="http://www.indicestudio.cl/">Indicestudio</a> recomiendan utilizar un navegador distinto o <a href="http://browsehappy.com/">actualiza tu explorador</a> para mejorar tu experiencia.</p>
-      <![endif]-->
-      <header id="header">
-       <div class="parallax-wrapper"> 
-        <div id="header-bkg" data-parallax="scroll" data-image-src="images/main.jpg" data-ios-fix="true">
-        </div>
-      </div>
-      <nav id="main-nav">
-        <div class="container">
-          <div id="logo-wrapper">
-            <img id="logo" src="images/logomain.svg" alt="logo">
-          </div>
-          <div id="logo-fixed-wrapper">
-            <a href="#header">
-              <img class="hidden" id="logo-fixed" src="images/logomain2.svg" alt="logo2">
-            </a>
-          </div>
-          <ul id="menu-right">
-            <li class="inner-menu"><a href="#header">Inicio</li></a>
-            <li class="inner-menu"><a href="#con-menu">Menu</li></a>
-            <li class="inner-menu"><a href="#resto">Galería</li></a>
-            <li class="inner-menu"><a href="#ubicacion">Contacto</li></a>
-          </ul>
-        </div><!-- End of container -->
-      </nav>
+<!--[if lt IE 10]>
+<p class="browserupgrade">Somos familia e <a href="http://www.indicestudio.cl/">Indicestudio</a> recomiendan utilizar un navegador distinto o <a href="http://browsehappy.com/">actualiza tu explorador</a> para mejorar tu experiencia.</p>
+<![endif]-->
+<header id="header">
 
-      <div id="main-title">
-        <h2 id="header-callout">Bienvenidos</h2>
-        <h1 id="header-title">Somos familia</h1>
-        <div id="separator">
-          <img class="separator" src="images/separador.svg" alt="separador">
-        </div>
-        <h3 id="header-subline">¡Ya abrimos!</h3>
-      </div>
-      <button type="button" data-toggle="modal" data-target="#carta-modal" class="roll-over">
-        <a href="#">carta</a>
-      </button>
-    </header><!-- End of header -->
+  <div class="parallax-wrapper"> 
+    <div id="header-bkg" data-parallax="scroll" data-image-src="images/main.jpg" data-ios-fix="true"></div>
+  </div>
 
+  <nav id="main-nav">
 
-    <!-- Modal -->
-    <div class="modal fade" id="carta-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Carta</h4>
-          </div>
-          <div class="modal-body">
-            Contenido de la carta
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="white-btn" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div><!-- End of carta modal -->
-
-
-
-    <section id="con-concepto">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="sec-title"><span class="capital">C</span>onoce</h2>
-            <h3 class="sec-subtitle">Nuestro concepto</h3>
-            <p class="sec-p">Somos la familia Cossio - Ortiz<br>Queremos recibirte con cariño y personalmente como en casa.<br><span class="italic">“Sabor, aroma, color y un ambiente familiar”</span>define nuestra mesa.
-            </p>
-            <hr align="center">
-            <div class="more-text">
-              <p class="sec-p">
-                Respetando un estilo clásico y sencillo con toques de vanguardia.<br>Somos una alternativa gastronómica nueva de la cocina Chilena,<br>recopilando antiguas recetas de la abuela e impregnando en ellas<br>su particular toque de amor y sabor, para el disfrute<br>de las familias de Chillán y de nuestras ilustres visitas de Chile y el mundo.
-              </p>
-            </div>
-            <div class="more-arrow">
-             <svg version="1.1" id="svg_arrow1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30" height="17.5" viewBox="0 0 30 17.5" enable-background="new 0 0 30 17.496" xml:space="preserve"><polygon points="2 0 0 1.9 14.9 17.5 30 2.2 28 0.2 14.9 13.5 "/></svg>
-           </div>
-         </div>
-         <div class="col-md-6">
-          <div class="col-md-6">
-            <img class="img-responsive" src="images/concepto.jpg" alt="concepto1">
-          </div>
-          <div class="col-md-6">
-            <img class="img-responsive" src="images/concepto2.jpg" alt="concepto2">
-          </div>
-        </div>
-      </div>
-    </div><!-- End of container -->
-  </section>
-
-
-  <section id="con-menu">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-sm-6"><img src="images/homecarta.png" alt="receta1"></div>
-          </div>
-        </div>
-
-
-        <div id="conoce" class="col-md-6">
-          <h2 class="sec-title top-margin">Conoce</h2>
-          <h3 class="sec-subtitle">Nuestro Menu</h3>
-          <p class="sec-p">Recopilamos antiguas recetas de la abuela e impregnamos en ellas un particular toque de amor y sabor, conoce nuestro menú.</p>
-        </div>
-        <button class="white-btn"><a href="#">Ver el menu completo</a></button>
+      <div id="logo-wrapper">
+        <img id="logo" src="images/logomain.svg" alt="logo">
       </div>
-    </div><!-- End of container-->
-  </section>
 
-  <section id="recetas">
-    <div class="container-fluid">
-      <div class="row">
-        <div id="sabores" data-parallax="scroll" data-image-src="images/sabores.jpg" data-speed="0.3" iosFix="true"></div>
+
+      <div id="logo-fixed-wrapper">
+        <a href="#header">
+          <img class="hidden" id="logo-fixed" src="images/logomain2.svg" alt="logo2">
+        </a>
+      </div>
+
+      <ul id="menu-right">
+        <li class="inner-menu"><a href="#header">Inicio</li></a>
+        <li class="inner-menu"><a href="#con-menu">Menu</li></a>
+        <li class="inner-menu"><a href="#galeria">Galería</li></a>
+        <li class="inner-menu"><a href="#ubicacion">Contacto</li></a>
+      </ul>
+
+    </div><!-- End of container -->
+  </nav>
+
+  <div id="main-title">
+    <h2 id="header-callout">Bienvenidos</h2>
+    <h1 id="header-title">Somos familia</h1>
+
+    <div id="separator">
+      <img class="separator" src="images/separador.svg" alt="separador">
+    </div>
+
+    <h3 id="header-subline">¡Ya abrimos!</h3>
+
+  </div>
+
+  <button type="button" data-toggle="modal" data-target="#carta-modal" class="roll-over">
+    <a href="#">carta</a>
+  </button>
+
+</header><!-- End of header -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="carta-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Carta</h4>
+      </div>
+
+      <div class="modal-body">
+        Contenido de la carta
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="white-btn" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div><!-- End of carta modal -->
+
+
+
+<section id="con-concepto">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 center-vertical">
+
+        <h2 class="sec-title"><span class="capital">C</span>onoce</h2>
+        <h3 class="sec-subtitle">Nuestro concepto</h3>
+        <p class="sec-p">Somos la familia Cossio - Ortiz<br>Queremos recibirte con cariño y personalmente como en casa.<br><span class="italic">“Sabor, aroma, color y un ambiente familiar”</span>define nuestra mesa.
+        </p>
+
+        <hr align="center">
+
+        <div class="more-text">
+          <p class="sec-p">
+            Respetando un estilo clásico y sencillo con toques de vanguardia.<br>Somos una alternativa gastronómica nueva de la cocina Chilena,<br>recopilando antiguas recetas de la abuela e impregnando en ellas<br>su particular toque de amor y sabor, para el disfrute<br>de las familias de Chillán y de nuestras ilustres visitas de Chile y el mundo.
+          </p>
+        </div>
+
+        <div class="more-arrow">
+          <svg version="1.1" id="svg_arrow1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30" height="17.5" viewBox="0 0 30 17.5" enable-background="new 0 0 30 17.496" xml:space="preserve"><polygon points="2 0 0 1.9 14.9 17.5 30 2.2 28 0.2 14.9 13.5 "/></polygon></svg>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="col-md-6">
+          <img class="img-responsive" src="images/concepto.jpg" alt="concepto1">
+        </div>
+
+        <div class="col-md-6">
+          <img class="img-responsive" src="images/concepto2.jpg" alt="concepto2">
+        </div>
+
       </div>
     </div>
-  </section>
 
-
-
-  <section id="galeria">
-    <!--<div id="resto" data-parallax="scroll" data-image-src="images/imagenresto.jpg" data-speed="0.3" iosFix="true">
-  </div>-->
-  <h2 class="sec-title">Conoce</h2>
-  <h3 class="sec-subtitle bottom-margin">Nuestro Restaurant</h3>
-  <div class="container">
-    <div id="makeMeScrollable">
-      <img src="images/galeria/m01.jpg" alt="frontis" id="test1">
-      <img src="images/galeria/m02.jpg" alt="frontis" id="test3">
-      <img src="images/galeria/m03.jpg" alt="frontis" id="test4">
-      <img src="images/galeria/m04.jpg" alt="frontis" id="test5">
-      <img src="images/galeria/m05.jpg" alt="frontis" id="test5">
-      <img src="images/galeria/m06.jpg" alt="frontis" id="test5">
-      <img src="images/galeria/m07.jpg" alt="frontis" id="test5">
-      <img src="images/galeria/m08.jpg" alt="frontis" id="test5">
-    </div>  
   </div>
+</section>
+
+
+<section id="con-menu">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6">
+        <img class="img-responsive" src="images/homecarta.png" alt="receta1">
+      </div>
+
+
+      <div id="conoce" class="col-md-6">
+        <h2 class="sec-title center-vertical-top">Conoce</h2>
+        <h3 class="sec-subtitle">Nuestro Menu</h3>
+        <p class="sec-p">Recopilamos antiguas recetas de la abuela e impregnamos en ellas un particular toque de amor y sabor, conoce nuestro menú.</p>
+        <button class="white-btn" type="button" data-toggle="modal" data-target="#carta-modal" class="roll-over">
+          <a href="#">Ver el menu completo</a>
+        </button>
+      </div> 
+
+    </div>
+  </div>
+</section>
+
+<section id="recetas">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sabores" data-parallax="scroll" data-image-src="images/sabores.jpg" data-speed="0.3" iosFix="true"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="galeria">
+<!--<div id="resto" data-parallax="scroll" data-image-src="images/imagenresto.jpg" data-speed="0.3" iosFix="true">
+</div>-->
+<h2 class="sec-title">Conoce</h2>
+<h3 class="sec-subtitle bottom-margin">Nuestro Restaurant</h3>
+<div class="container">
+  <div id="makeMeScrollable">
+    <a href="images/galeria/f01.jpg" alt="frontis" id="test1" data-lightbox="galeria" data-title="Nuestra casa">
+      <img src="images/galeria/m01.jpg" id="test" alt="frontis">
+    </a>
+    <a href="images/galeria/f02.jpg" alt="frontis" id="test3" data-lightbox="galeria" data-title="A cuadras del centro">
+      <img src="images/galeria/m02.jpg" id="test" alt="letrero somos familia">
+    </a>
+    <a href="images/galeria/f03.jpg" alt="frontis" id="test4" data-lightbox="galeria" data-title="Entorno familiar">
+      <img src="images/galeria/m03.jpg" id="test" alt="mesas">
+    </a>
+    <a href="images/galeria/f04.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Conversación distendida">
+      <img src="images/galeria/m04.jpg" id="test" alt="publico somos familia">
+    </a>
+    <a href="images/galeria/f05.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Ambiente tranquilo">
+      <img src="images/galeria/m05.jpg" id="test" alt="entorno">
+    </a>
+    <a href="images/galeria/f06.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Cómodos parajes">
+      <img src="images/galeria/m06.jpg" id="test" alt="sillas">
+    </a>
+    <a href="images/galeria/f07.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Se siente como en casa">
+      <img src="images/galeria/m07.jpg" id="test" alt="clientes">
+    </a>
+    <a href="images/galeria/f08.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Excelente presentación">
+      <img src="images/galeria/m08.jpg" id="test" alt="jugo frutilla">
+    </a>
+  </div>  
+</div>
 </section>
 
 
@@ -279,6 +322,7 @@
 <script src="scripts/vendor/jquery.kinetic.js"></script>
 <script src="scripts/vendor/jquery.mousewheel.js"></script>
 <script src="scripts/vendor/jquery.smoothDivScroll-1.3.js"></script>
+<script src="bower_components/lightbox2/dist/js/lightbox.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -288,13 +332,13 @@
 
 <!-- Scroll gallery -->
 <script type="text/javascript">
-    // Initialize the plugin with no custom options
-    $(document).ready(function () {
-      // None of the options are set
-      $("div#makeMeScrollable").smoothDivScroll({
-        autoScrollingMode: "onStart"
-      });
-    });
+// Initialize the plugin with no custom options
+$(document).ready(function () {
+// None of the options are set
+$("div#makeMeScrollable").smoothDivScroll({
+  autoScrollingMode: ""
+  });
+});
 </script>
 </body>
 </html>
