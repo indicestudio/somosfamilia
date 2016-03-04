@@ -92,6 +92,16 @@
 </style>
 </head>
 <body>
+<!-- Facebook API -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><!--End of facebook API-->
+
 <!--[if lt IE 10]>
 <p class="browserupgrade">Somos familia e <a href="http://www.indicestudio.cl/">Indicestudio</a> recomiendan utilizar un navegador distinto o <a href="http://browsehappy.com/">actualiza tu explorador</a> para mejorar tu experiencia.</p>
 <![endif]-->
@@ -116,8 +126,8 @@
       </div>
 
       <ul id="menu-right">
-        <li class="inner-menu"><a href="#header">Inicio</li></a>
-        <li class="inner-menu"><a href="#con-menu">Menu</li></a>
+        <li class="inner-menu active"><a href="#header">Inicio</li></a>
+        <li class="inner-menu"><a href="#con-menu">Menú</li></a>
         <li class="inner-menu"><a href="#galeria">Galería</li></a>
         <li class="inner-menu"><a href="#ubicacion">Contacto</li></a>
       </ul>
@@ -245,34 +255,48 @@
 </div>-->
 <h2 class="sec-title">Conoce</h2>
 <h3 class="sec-subtitle bottom-margin">Nuestro Restaurant</h3>
-<div class="container">
-  <div id="makeMeScrollable">
-    <a href="images/galeria/f01.jpg" alt="frontis" id="test1" data-lightbox="galeria" data-title="Nuestra casa">
-      <img src="images/galeria/m01.jpg" id="test" alt="frontis">
-    </a>
-    <a href="images/galeria/f02.jpg" alt="frontis" id="test3" data-lightbox="galeria" data-title="A cuadras del centro">
-      <img src="images/galeria/m02.jpg" id="test" alt="letrero somos familia">
-    </a>
-    <a href="images/galeria/f03.jpg" alt="frontis" id="test4" data-lightbox="galeria" data-title="Entorno familiar">
-      <img src="images/galeria/m03.jpg" id="test" alt="mesas">
-    </a>
-    <a href="images/galeria/f04.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Conversación distendida">
-      <img src="images/galeria/m04.jpg" id="test" alt="publico somos familia">
-    </a>
-    <a href="images/galeria/f05.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Ambiente tranquilo">
-      <img src="images/galeria/m05.jpg" id="test" alt="entorno">
-    </a>
-    <a href="images/galeria/f06.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Cómodos parajes">
-      <img src="images/galeria/m06.jpg" id="test" alt="sillas">
-    </a>
-    <a href="images/galeria/f07.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Se siente como en casa">
-      <img src="images/galeria/m07.jpg" id="test" alt="clientes">
-    </a>
-    <a href="images/galeria/f08.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Excelente presentación">
-      <img src="images/galeria/m08.jpg" id="test" alt="jugo frutilla">
-    </a>
-  </div>  
-</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <img style="margin-top:74px;" src="images/arrow_left.png" alt="flecha">
+      </div>
+      <div class="col-md-10">
+        <div id="makeMeScrollable">
+          <a href="images/galeria/f01.jpg" alt="frontis" id="test1" data-lightbox="galeria" data-title="Nuestra casa">
+            <img src="images/galeria/m01.jpg" id="test" alt="frontis">
+          </a>
+          <a href="images/galeria/f02.jpg" alt="frontis" id="test3" data-lightbox="galeria" data-title="A cuadras del centro">
+            <img src="images/galeria/m02.jpg" id="test" alt="letrero somos familia">
+          </a>
+          <a href="images/galeria/f03.jpg" alt="frontis" id="test4" data-lightbox="galeria" data-title="Entorno familiar">
+            <img src="images/galeria/m03.jpg" id="test" alt="mesas">
+          </a>
+          <a href="images/galeria/f04.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Conversación distendida">
+            <img src="images/galeria/m04.jpg" id="test" alt="publico somos familia">
+          </a>
+          <a href="images/galeria/f05.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Ambiente tranquilo">
+            <img src="images/galeria/m05.jpg" id="test" alt="entorno">
+          </a>
+          <a href="images/galeria/f06.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Cómodos parajes">
+            <img src="images/galeria/m06.jpg" id="test" alt="sillas">
+          </a>
+          <a href="images/galeria/f07.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Se siente como en casa">
+            <img src="images/galeria/m07.jpg" id="test" alt="clientes">
+          </a>
+          <a href="images/galeria/f08.jpg" alt="frontis" id="test5" data-lightbox="galeria" data-title="Excelente presentación">
+            <img src="images/galeria/m08.jpg" id="test" alt="jugo frutilla">
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-1">
+        <img style="margin-top:74px;" src="images/arrow_right.png" alt="flecha">
+      </div>
+        
+    </div> 
+  </div>
+
 </section>
 
 
@@ -300,7 +324,30 @@
 
 <footer id="footer">
   <div class="container">
-    <img id="logo" src="images/logomain.svg" alt="logo" style="margin-bottom: 50px; margin-left: -700px;">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-5">
+            <img class="img-responsive" id="logo-footer" src="images/logomain.svg" alt="logo">
+          </div>
+          <div class="col-md-7">
+            
+              <h3 class="sec-subtitle">Contacto</h3>
+            <p class="sec-p">Se parte de nuestra familia</p>
+            <p class="sec-p">
+              El Roble Nº987<br>
+              42-2324773<br>
+              contacto@somosfamiliarestaurant.cl
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+          <h3 class="sec-subtitle">Horario de atención</h3>
+          <p class="sec-p">Lunes a sábado de 00:00hrs. a 00:00hrs.</p>
+          <div class="fb-follow" data-href="https://www.facebook.com/somosfamiliarestaurant" data-colorscheme="dark" data-layout="standard" data-show-faces="true"></div>
+      </div>
+    </div>
   </div>
 </footer>
 
@@ -332,13 +379,11 @@
 
 <!-- Scroll gallery -->
 <script type="text/javascript">
-// Initialize the plugin with no custom options
-$(document).ready(function () {
-// None of the options are set
-$("div#makeMeScrollable").smoothDivScroll({
-  autoScrollingMode: ""
+  // Initialize the plugin with no custom options
+  $(document).ready(function () {
+  // None of the options are set
+  $("div#makeMeScrollable").smoothDivScroll({});
   });
-});
 </script>
 </body>
 </html>

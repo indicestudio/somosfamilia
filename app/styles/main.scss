@@ -177,6 +177,9 @@ button {
     height: 6em;
   }
 }
+#logo-footer {
+  margin-top: -25px;
+}
 
 #logo-fixed-wrapper {
   position: relative;
@@ -195,16 +198,43 @@ button {
 
 #menu-right {
   float: right;
+  li {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 0;
+      height: 2px;
+      background-color: $color-red;
+      width: 0;
+      transition: width 0.3s ease;
+      z-index: 100;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
   a {
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease;
-    &:hover {
-      color: $color-red;
-    }
   }
 }
 
+.active {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    height: 2px;
+    background-color: $color-red;
+    width: 100% !important;
+    z-index: 100;
+  }
+}
 
 //background
 .parallax-wrapper {
@@ -382,7 +412,7 @@ button {
 //footer
 
 #footer {
-  padding-top: 60px;
+  padding: 60px 0;
   background: $color-dark;
   color: $color-white;
   font-family: $font-header;
@@ -404,19 +434,14 @@ if you have links use #makeMeScrollable div.scrollableArea a and so on. */
   float: left;
   margin-left: 30px;
   padding: 0;
-/* If you don't want the images in the scroller to be selectable, try the following
-block of code. It's just a nice feature that prevent the images from
-accidentally becoming selected/inverted when the user interacts with the scroller. */
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
-transform: translateY(0);
-transition: transform 0.3s ease;
-  &:hover {
-    transform: translateY(20px);
-  }
+  /* If you don't want the images in the scroller to be selectable, try the following
+  block of code. It's just a nice feature that prevent the images from
+  accidentally becoming selected/inverted when the user interacts with the scroller. */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
@@ -424,12 +449,12 @@ transition: transform 0.3s ease;
 /* Invisible left hotspot */
 div.scrollingHotSpotLeft {
   /* The hotspots have a minimum width of 100 pixels and if there is room the will grow
-    and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
+  and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
   min-width: 75px;
   width: 10%;
   height: 100%;
   /* There is a big background image and it's used to solve some problems I experienced
-    in Internet Explorer 6. */
+  in Internet Explorer 6. */
   background-image: url(../images/big_transparent.gif);
   background-repeat: repeat;
   background-position: center center;
@@ -478,16 +503,16 @@ div.scrollingHotSpotRightVisible {
 
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
-*/
-div.scrollWrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
+   */
+   div.scrollWrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
 
-div.scrollableArea {
-  position: relative;
-  width: auto;
-  height: 100%;
-}
+  div.scrollableArea {
+    position: relative;
+    width: auto;
+    height: 100%;
+  }

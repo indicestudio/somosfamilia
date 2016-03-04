@@ -52,7 +52,11 @@ $(document).ready(function(){
         touchScrolling: true,
         hotSpotScrolling: false
     });
-
+	//Link menu active
+	$('#menu-right').on('click', 'li', function(){
+    $('#menu-right li').removeClass('active');
+    $(this).addClass('active');
+	});
 });
 
 
