@@ -184,14 +184,15 @@
 
         <h2 class="sec-title"><span class="capital">C</span>onoce</h2>
         <h3 class="sec-subtitle">Nuestro concepto</h3>
-        <p class="sec-p">Somos la familia Cossio - Ortiz<br>Queremos recibirte con cariño y personalmente como en casa.<br><span class="italic">“Sabor, aroma, color y un ambiente familiar”</span>define nuestra mesa.
+        <p class="sec-p">Somos familia Cossio - Ortíz y queremos recibirte como te mereces, con mucho cariño y personalmente como si llegaras a casa.
         </p>
 
         <hr align="center">
 
         <div class="more-text">
           <p class="sec-p">
-            Respetando un estilo clásico y sencillo con toques de vanguardia.<br>Somos una alternativa gastronómica nueva de la cocina Chilena,<br>recopilando antiguas recetas de la abuela e impregnando en ellas<br>su particular toque de amor y sabor, para el disfrute<br>de las familias de Chillán y de nuestras ilustres visitas de Chile y el mundo.
+            “Sabor, aroma, color y un ambiente familiar” es todo lo que define nuestra mesa;  respetando un estilo clásico y sencillo pero con los toques justos de vanguardia, logrando ser una nueva alternativa gastronómica de la cocina Chilena en nuestra ciudad.<br>
+            Uno de nuestros principales secretos está en la recopilación de antiguas recetas de “la abuela”, donde hemos logrado impregnar  su particular toque de amor y sabor, todo para que las familias de Chillán puedan disfrutar, al igual que nuestras ilustres visitas de Chile y el mundo.
           </p>
         </div>
 
@@ -258,10 +259,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-1">
-        <img style="margin-top:74px;" src="images/arrow_left.png" alt="flecha">
-      </div>
-      <div class="col-md-10">
+      <div class="col-md-12">
         <div id="makeMeScrollable">
           <a href="images/galeria/f01.jpg" alt="frontis" id="test1" data-lightbox="galeria" data-title="Nuestra casa">
             <img src="images/galeria/m01.jpg" id="test" alt="frontis">
@@ -289,10 +287,6 @@
           </a>
         </div>
       </div>
-
-      <div class="col-md-1">
-        <img style="margin-top:74px;" src="images/arrow_right.png" alt="flecha">
-      </div>
         
     </div> 
   </div>
@@ -309,8 +303,8 @@
         <h3 class="sec-subtitle">Central</h3>
         <p class="sec-p">El Roble Nº 987 <br>
           Ubicado en el centro neurágico de la ciudad <br>
-          "Somos familia" abre sus puertas en chillán, en pleno
-          centro de la futura capital de Ñuble.
+          "Somos familia" abre sus puertas en chillán,<br>en pleno
+          centro de la futura capital de Ñuble.<br>
           !Te esperamos!
         </p>
         <button class="white-btn"><a href="#">Haz tu reserva</a></button>
@@ -327,25 +321,26 @@
     <div class="row">
       <div class="col-md-6">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-4">
             <img class="img-responsive" id="logo-footer" src="images/logomain.svg" alt="logo">
           </div>
-          <div class="col-md-7">
+          <div class="col-md-8">
             
-              <h3 class="sec-subtitle">Contacto</h3>
+              <h3 class="sec-subtitle no-margin">Contacto</h3>
             <p class="sec-p">Se parte de nuestra familia</p>
             <p class="sec-p">
               El Roble Nº987<br>
               42-2324773<br>
               contacto@somosfamiliarestaurant.cl
             </p>
+            <h3 class="sec-subtitle no-margin">Horario de atención</h3>
+            <p class="sec-p">Lunes a sábado de 00:00hrs. a 00:00hrs.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-md-offset-2">
-          <h3 class="sec-subtitle">Horario de atención</h3>
-          <p class="sec-p">Lunes a sábado de 00:00hrs. a 00:00hrs.</p>
-          <div class="fb-follow" data-href="https://www.facebook.com/somosfamiliarestaurant" data-colorscheme="dark" data-layout="standard" data-show-faces="true"></div>
+      <div class="col-md-6">
+          
+          <div class="fb-page" data-href="https://www.facebook.com/somosfamiliarestaurant/" data-tabs="timeline" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/somosfamiliarestaurant/"><a href="https://www.facebook.com/somosfamiliarestaurant/">Somos Familia</a></blockquote></div></div>
       </div>
     </div>
   </div>
@@ -382,7 +377,12 @@
   // Initialize the plugin with no custom options
   $(document).ready(function () {
   // None of the options are set
-  $("div#makeMeScrollable").smoothDivScroll({});
+  $("div#makeMeScrollable").smoothDivScroll({
+      hotSpotScrolling: true,
+      touchScrolling: true,
+      manualContinuousScrolling: false,
+      mousewheelScrolling: true
+    });
   });
 </script>
 </body>

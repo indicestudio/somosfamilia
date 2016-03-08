@@ -70,11 +70,11 @@ button {
   outline: none;
 }
 
-.row {
-  margin-top: 10px;
+//Helper classes
+.no-margin {
+  margin: 0 !important;
 }
 
-//Helper classes
 .bottom-margin {
   margin-bottom: 70px !important;
 }
@@ -177,9 +177,6 @@ button {
     height: 6em;
   }
 }
-#logo-footer {
-  margin-top: -25px;
-}
 
 #logo-fixed-wrapper {
   position: relative;
@@ -206,7 +203,7 @@ button {
       top: 80%;
       left: 0;
       height: 2px;
-      background-color: $color-red;
+      background-color: $color-white;
       width: 0;
       transition: width 0.3s ease;
       z-index: 100;
@@ -221,6 +218,12 @@ button {
     text-decoration: none;
     color: white;
   }
+}
+
+.arrow-gallery {
+  margin-top: 117px;
+  height: 30px;
+  width: 15px;
 }
 
 .active {
